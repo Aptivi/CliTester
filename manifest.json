@@ -1,0 +1,158 @@
+{
+  "sitemap": {
+    "baseUrl": "https://aptivi.github.io/CliTester/"
+  },
+  "source_base_path": "/home/runner/work/CliTester/CliTester/DocGen",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CliTester.Exceptions.ValueMismatchException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CliTester.Exceptions.ValueMismatchException.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CliTester.Exceptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CliTester.Exceptions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CliTester.Instances.Fixture.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CliTester.Instances.Fixture.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CliTester.Instances.FixtureConditional-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CliTester.Instances.FixtureConditional-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CliTester.Instances.FixtureUnconditional-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CliTester.Instances.FixtureUnconditional-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CliTester.Instances.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CliTester.Instances.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CliTester.Tools.FixtureRunner.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CliTester.Tools.FixtureRunner.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CliTester.Tools.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CliTester.Tools.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".json": {
+          "relative_path": "api/toc.json"
+        },
+        ".html": {
+          "relative_path": "api/toc.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "favicon.ico",
+      "output": {
+        "resource": {
+          "relative_path": "favicon.ico"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "logo.svg",
+      "output": {
+        "resource": {
+          "relative_path": "logo.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".json": {
+          "relative_path": "toc.json"
+        },
+        ".html": {
+          "relative_path": "toc.html"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "api/CliTester.Exceptions.ValueMismatchException.html": {
+    "href": "api/CliTester.Exceptions.ValueMismatchException.html",
+    "title": "Class ValueMismatchException | CliTester API - Aptivi",
+    "keywords": "Class ValueMismatchException This is an exception that gets thrown when this test fails because an expected value doesn't match an actual value. Inheritance object Exception ValueMismatchException Namespace: CliTester.Exceptions Assembly: CliTester.dll Syntax [Serializable] public class ValueMismatchException : Exception Constructors | Edit this page View Source ValueMismatchException() Creates a new exception Declaration public ValueMismatchException() | Edit this page View Source ValueMismatchException(string) Creates a new exception Declaration public ValueMismatchException(string message) Parameters Type Name Description string message Message to describe the reason | Edit this page View Source ValueMismatchException(string, Exception) Creates a new exception Declaration public ValueMismatchException(string message, Exception inner) Parameters Type Name Description string message Message to describe the reason Exception inner Inner exception"
+  },
+  "api/CliTester.Exceptions.html": {
+    "href": "api/CliTester.Exceptions.html",
+    "title": "Namespace CliTester.Exceptions | CliTester API - Aptivi",
+    "keywords": "Namespace CliTester.Exceptions Classes ValueMismatchException This is an exception that gets thrown when this test fails because an expected value doesn't match an actual value."
+  },
+  "api/CliTester.Instances.Fixture.html": {
+    "href": "api/CliTester.Instances.Fixture.html",
+    "title": "Class Fixture | CliTester API - Aptivi",
+    "keywords": "Class Fixture Test fixture class (general) Inheritance object Fixture FixtureConditional<TDelegate> FixtureUnconditional<TDelegate> Namespace: CliTester.Instances Assembly: CliTester.dll Syntax public class Fixture Constructors | Edit this page View Source Fixture(string, string) Makes a new test fixture class Declaration public Fixture(string fixtureName, string fixtureDesc) Parameters Type Name Description string fixtureName Fixture name string fixtureDesc Fixture description Properties | Edit this page View Source Description Fixture description Declaration public string Description { get; } Property Value Type Description string | Edit this page View Source Name Fixture name Declaration public string Name { get; } Property Value Type Description string"
+  },
+  "api/CliTester.Instances.FixtureConditional-1.html": {
+    "href": "api/CliTester.Instances.FixtureConditional-1.html",
+    "title": "Class FixtureConditional<TDelegate> | CliTester API - Aptivi",
+    "keywords": "Class FixtureConditional<TDelegate> Test fixture class (routines that don't return void) Inheritance object Fixture FixtureConditional<TDelegate> Inherited Members Fixture.Name Fixture.Description Namespace: CliTester.Instances Assembly: CliTester.dll Syntax public class FixtureConditional<TDelegate> : Fixture where TDelegate : Delegate Type Parameters Name Description TDelegate Constructors | Edit this page View Source FixtureConditional(string, string, TDelegate?, object?) Makes a new test fixture class Declaration public FixtureConditional(string fixtureName, string fixtureDesc, TDelegate? fixtureDelegate, object? expectedValue) Parameters Type Name Description string fixtureName Fixture name string fixtureDesc Fixture description TDelegate fixtureDelegate Delegate that executes this test fixture object expectedValue Expected value"
+  },
+  "api/CliTester.Instances.FixtureUnconditional-1.html": {
+    "href": "api/CliTester.Instances.FixtureUnconditional-1.html",
+    "title": "Class FixtureUnconditional<TDelegate> | CliTester API - Aptivi",
+    "keywords": "Class FixtureUnconditional<TDelegate> Test fixture class (routines that return void) Inheritance object Fixture FixtureUnconditional<TDelegate> Inherited Members Fixture.Name Fixture.Description Namespace: CliTester.Instances Assembly: CliTester.dll Syntax public class FixtureUnconditional<TDelegate> : Fixture where TDelegate : Delegate Type Parameters Name Description TDelegate Constructors | Edit this page View Source FixtureUnconditional(string, string, TDelegate?) Makes a new test fixture class Declaration public FixtureUnconditional(string fixtureName, string fixtureDesc, TDelegate? fixtureDelegate) Parameters Type Name Description string fixtureName Fixture name string fixtureDesc Fixture description TDelegate fixtureDelegate Delegate that executes this test fixture"
+  },
+  "api/CliTester.Instances.html": {
+    "href": "api/CliTester.Instances.html",
+    "title": "Namespace CliTester.Instances | CliTester API - Aptivi",
+    "keywords": "Namespace CliTester.Instances Classes Fixture Test fixture class (general) FixtureConditional<TDelegate> Test fixture class (routines that don't return void) FixtureUnconditional<TDelegate> Test fixture class (routines that return void)"
+  },
+  "api/CliTester.Tools.FixtureRunner.html": {
+    "href": "api/CliTester.Tools.FixtureRunner.html",
+    "title": "Class FixtureRunner | CliTester API - Aptivi",
+    "keywords": "Class FixtureRunner Fixture runner class to start test fixtures Inheritance object FixtureRunner Namespace: CliTester.Tools Assembly: CliTester.dll Syntax public static class FixtureRunner Methods | Edit this page View Source RunTest<TDelegate>(FixtureUnconditional<TDelegate>?, out Exception?, params object?[]?) Runs the test fixture for functions that return void Declaration public static bool RunTest<TDelegate>(FixtureUnconditional<TDelegate>? fixture, out Exception? ex, params object?[]? args) where TDelegate : Delegate Parameters Type Name Description FixtureUnconditional<TDelegate> fixture Test fixture to test against. It must be of type FixtureUnconditional<TDelegate> Exception ex Output parameter for any possible exception being thrown, only populated if the test succeeded object[] args List of arguments Returns Type Description bool true if test has succeeded; false otherwise Type Parameters Name Description TDelegate Delegate type that points to functions that return void, such as Action delegates Exceptions Type Condition ArgumentNullException There is no fixture ArgumentException Attempted to pass fixture as base fixture | Edit this page View Source RunTest<TDelegate, TValue>(FixtureConditional<TDelegate>?, out Exception?, params object?[]?) Runs the test fixture for functions that don't return void and compares against the returned value Declaration public static bool RunTest<TDelegate, TValue>(FixtureConditional<TDelegate>? fixture, out Exception? ex, params object?[]? args) where TDelegate : Delegate Parameters Type Name Description FixtureConditional<TDelegate> fixture Test fixture to test against. It must be of type FixtureConditional<TDelegate> Exception ex Output parameter for any possible exception being thrown, only populated if the test succeeded object[] args List of arguments Returns Type Description bool true if test has succeeded and the two values match; false otherwise Type Parameters Name Description TDelegate Delegate type that points to functions that don't return void, such as Func<TResult> delegates TValue Value type that must match the expected type value Exceptions Type Condition ArgumentNullException There is no fixture ArgumentException Attempted to pass fixture as base fixture ValueMismatchException Returned value doesn't match expected value"
+  },
+  "api/CliTester.Tools.html": {
+    "href": "api/CliTester.Tools.html",
+    "title": "Namespace CliTester.Tools | CliTester API - Aptivi",
+    "keywords": "Namespace CliTester.Tools Classes FixtureRunner Fixture runner class to start test fixtures"
+  },
+  "index.html": {
+    "href": "index.html",
+    "title": "| CliTester API - Aptivi",
+    "keywords": "What is CliTester? CliTester is a library that allows you to make your tests more interactive. What is this web page? This webpage is an API documentation for mod developers to be used as reference. It constantly gets updated as we push the updates to the main and servicing versions of this project. If you still intend to use a documentation specific to your preferred version of CliTester, you may refer to the releases page of the project and download the attached <version>-doc.zip file. To get started using the documentation, select API Documentation from the top menu and select a namespace to get a clear overview of the API. Feedback If you wish to leave feedback to us about this API reference website, use the issue tracker of the project. If you wish to contribute to the documentation of the API, go to the project source code and make your improvements there on a draft Pull Request; we don't support override files that are made by clicking on Improve this doc. Any meaningful contributions are welcome. Copyright (c) 2024 Aptivi. All rights reserved."
+  }
+}
