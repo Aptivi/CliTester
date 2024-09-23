@@ -48,6 +48,41 @@ namespace CliTester.Tools
                 throw new ArgumentNullException(nameof(fixture));
             if (fixture.GetType() == typeof(Fixture))
                 throw new ArgumentException("This fixture may not be a base Fixture class. Specify an unconditional fixture.");
+            args ??= fixture.initialParameters;
+
+            // Run the fixture
+            bool success = true;
+            try
+            {
+                fixture.fixtureDelegate.DynamicInvoke(args);
+            }
+            catch (Exception exc)
+            {
+                ex = exc;
+                success = false;
+            }
+            return success;
+        }
+        
+        /// <summary>
+        /// Runs the test fixture for functions that return void
+        /// </summary>
+        /// <param name="fixture">Test fixture to test against. It must be of type <see cref="FixtureUnconditional"/></param>
+        /// <param name="ex">Output parameter for any possible exception being thrown, only populated if the test succeeded</param>
+        /// <param name="args">List of arguments</param>
+        /// <returns><see langword="true"/> if test has succeeded; <see langword="false"/> otherwise</returns>
+        /// <exception cref="ArgumentNullException">There is no fixture</exception>
+        /// <exception cref="ArgumentException">Attempted to pass <paramref name="fixture"/> as base fixture</exception>
+        public static bool RunUnconditionalTest(FixtureUnconditional? fixture, out Exception? ex, params object?[]? args)
+        {
+            ex = null;
+
+            // Check for fixture
+            if (fixture is null)
+                throw new ArgumentNullException(nameof(fixture));
+            if (fixture.GetType() == typeof(Fixture))
+                throw new ArgumentException("This fixture may not be a base Fixture class. Specify an unconditional fixture.");
+            args ??= fixture.initialParameters;
 
             // Run the fixture
             bool success = true;
@@ -85,6 +120,7 @@ namespace CliTester.Tools
                 throw new ArgumentNullException(nameof(fixture));
             if (fixture.GetType() == typeof(Fixture))
                 throw new ArgumentException("This fixture may not be a base Fixture class. Specify a conditional fixture.");
+            args ??= fixture.initialParameters;
 
             // Run the fixture
             bool success = true;
@@ -101,6 +137,70 @@ namespace CliTester.Tools
                 success = false;
             }
             return success;
+        }
+
+        /// <summary>
+        /// Runs the test fixture for functions that don't return void and compares against the returned value
+        /// </summary>
+        /// <typeparam name="TValue">Value type that must match the expected type value</typeparam>
+        /// <param name="fixture">Test fixture to test against. It must be of type <see cref="FixtureConditional"/></param>
+        /// <param name="ex">Output parameter for any possible exception being thrown, only populated if the test succeeded</param>
+        /// <param name="args">List of arguments</param>
+        /// <returns><see langword="true"/> if test has succeeded and the two values match; <see langword="false"/> otherwise</returns>
+        /// <exception cref="ArgumentNullException">There is no fixture</exception>
+        /// <exception cref="ArgumentException">Attempted to pass <paramref name="fixture"/> as base fixture</exception>
+        /// <exception cref="ValueMismatchException">Returned value doesn't match expected value</exception>
+        public static bool RunConditionalTest<TValue>(FixtureConditional? fixture, out Exception? ex, params object?[]? args)
+        {
+            ex = null;
+
+            // Check for fixture
+            if (fixture is null)
+                throw new ArgumentNullException(nameof(fixture));
+            if (fixture.GetType() == typeof(Fixture))
+                throw new ArgumentException("This fixture may not be a base Fixture class. Specify a conditional fixture.");
+            args ??= fixture.initialParameters;
+
+            // Run the fixture
+            bool success = true;
+            try
+            {
+                var returned = (TValue)fixture.fixtureDelegate.DynamicInvoke(args);
+                var expected = (TValue?)fixture.expectedValue;
+                if (!returned.Equals(expected))
+                    throw new ValueMismatchException($"Returned value {returned} doesn't match expected value {fixture.expectedValue}");
+            }
+            catch (Exception exc)
+            {
+                ex = exc;
+                success = false;
+            }
+            return success;
+        }
+
+        /// <summary>
+        /// Runs the general-purpose test fixture
+        /// </summary>
+        /// <param name="fixture">Test fixture to test against. It must not be of type <see cref="Fixture"/>, but one of its derivatives</param>
+        /// <param name="ex">Output parameter for any possible exception being thrown, only populated if the test succeeded</param>
+        /// <param name="args">List of arguments</param>
+        /// <returns><see langword="true"/> if test has succeeded and the two values match; <see langword="false"/> otherwise</returns>
+        /// <exception cref="ArgumentNullException">There is no fixture</exception>
+        /// <exception cref="ArgumentException">Attempted to pass <paramref name="fixture"/> as base fixture</exception>
+        /// <exception cref="ValueMismatchException">Returned value doesn't match expected value</exception>
+        public static bool RunGeneralTest(Fixture? fixture, out Exception? ex, params object?[]? args)
+        {
+            if (fixture is null)
+                throw new ArgumentNullException(nameof(fixture));
+            if (fixture.GetType() == typeof(Fixture))
+                throw new ArgumentException("This fixture is not conditional.");
+            args ??= fixture.initialParameters;
+            if (fixture.GetType() == typeof(FixtureConditional) || fixture.GetType().BaseType == typeof(FixtureConditional))
+                return RunConditionalTest<object>((FixtureConditional?)fixture, out ex, args);
+            else if (fixture.GetType() == typeof(FixtureUnconditional) || fixture.GetType().BaseType == typeof(FixtureUnconditional))
+                return RunUnconditionalTest((FixtureUnconditional)fixture, out ex, args);
+            else
+                throw new ArgumentException("This fixture type is invalid.");
         }
     }
 }

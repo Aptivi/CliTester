@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "CliTester.Demo": {
+      "commandName": "Project"
+    },
+    "CliTester.Demo TUI": {
+      "commandName": "Project",
+      "commandLineArgs": "-tui"
+    }
+  }
+}

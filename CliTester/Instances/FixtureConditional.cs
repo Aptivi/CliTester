@@ -25,11 +25,10 @@ namespace CliTester.Instances
     /// <summary>
     /// Test fixture class (routines that don't return <see langword="void"/>)
     /// </summary>
-    [DebuggerDisplay("[C: {fixtureDelegate.GetType().Name}] {Name}: {Description}")]
-    public class FixtureConditional<TDelegate> : Fixture
-        where TDelegate : Delegate
+    [DebuggerDisplay("[C non-generic: {fixtureDelegate.GetType().Name}] {Name}: {Description}")]
+    public class FixtureConditional : Fixture
     {
-        internal TDelegate fixtureDelegate;
+        internal Delegate fixtureDelegate;
         internal object? expectedValue;
 
         /// <summary>
@@ -39,8 +38,9 @@ namespace CliTester.Instances
         /// <param name="fixtureDesc">Fixture description</param>
         /// <param name="fixtureDelegate">Delegate that executes this test fixture</param>
         /// <param name="expectedValue">Expected value</param>
-        public FixtureConditional(string fixtureName, string fixtureDesc, TDelegate? fixtureDelegate, object? expectedValue) :
-            base(fixtureName, fixtureDesc)
+        /// <param name="initialParameters">Fixture initial parameters</param>
+        public FixtureConditional(string fixtureName, string fixtureDesc, Delegate? fixtureDelegate, object? expectedValue, params object?[]? initialParameters) :
+            base(fixtureName, fixtureDesc, initialParameters)
         {
             // Check for delegate type
             if (fixtureDelegate is null)
@@ -52,5 +52,25 @@ namespace CliTester.Instances
             this.fixtureDelegate = fixtureDelegate;
             this.expectedValue = expectedValue;
         }
+    }
+
+    /// <summary>
+    /// Test fixture class (routines that don't return <see langword="void"/>)
+    /// </summary>
+    [DebuggerDisplay("[C generic: {fixtureDelegate.GetType().Name}] {Name}: {Description}")]
+    public class FixtureConditional<TDelegate> : FixtureConditional
+        where TDelegate : Delegate
+    {
+        /// <summary>
+        /// Makes a new test fixture class
+        /// </summary>
+        /// <param name="fixtureName">Fixture name</param>
+        /// <param name="fixtureDesc">Fixture description</param>
+        /// <param name="fixtureDelegate">Delegate that executes this test fixture</param>
+        /// <param name="expectedValue">Expected value</param>
+        /// <param name="initialParameters">Fixture initial parameters</param>
+        public FixtureConditional(string fixtureName, string fixtureDesc, TDelegate? fixtureDelegate, object? expectedValue, params object?[]? initialParameters) :
+            base(fixtureName, fixtureDesc, fixtureDelegate, expectedValue, initialParameters)
+        { }
     }
 }

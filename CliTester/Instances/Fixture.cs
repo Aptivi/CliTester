@@ -25,10 +25,11 @@ namespace CliTester.Instances
     /// Test fixture class (general)
     /// </summary>
     [DebuggerDisplay("{Name}: {Description}")]
-    public class Fixture
+    public abstract class Fixture
     {
         internal string fixtureName = "";
         internal string fixtureDesc = "";
+        internal object?[]? initialParameters = null;
 
         /// <summary>
         /// Fixture name
@@ -47,11 +48,13 @@ namespace CliTester.Instances
         /// </summary>
         /// <param name="fixtureName">Fixture name</param>
         /// <param name="fixtureDesc">Fixture description</param>
-        public Fixture(string fixtureName, string fixtureDesc)
+        /// <param name="initialParameters">Fixture initial parameters</param>
+        public Fixture(string fixtureName, string fixtureDesc, params object?[]? initialParameters)
         {
             // Install values
             this.fixtureName = fixtureName ?? "Untitled fixture";
             this.fixtureDesc = fixtureDesc ?? "";
+            this.initialParameters = initialParameters;
         }
     }
 }

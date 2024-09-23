@@ -25,11 +25,10 @@ namespace CliTester.Instances
     /// <summary>
     /// Test fixture class (routines that return <see langword="void"/>)
     /// </summary>
-    [DebuggerDisplay("[U: {fixtureDelegate.GetType().Name}] {Name}: {Description}")]
-    public class FixtureUnconditional<TDelegate> : Fixture
-        where TDelegate : Delegate
+    [DebuggerDisplay("[U non-generic: {fixtureDelegate.GetType().Name}] {Name}: {Description}")]
+    public class FixtureUnconditional : Fixture
     {
-        internal TDelegate fixtureDelegate;
+        internal Delegate fixtureDelegate;
 
         /// <summary>
         /// Makes a new test fixture class
@@ -37,8 +36,9 @@ namespace CliTester.Instances
         /// <param name="fixtureName">Fixture name</param>
         /// <param name="fixtureDesc">Fixture description</param>
         /// <param name="fixtureDelegate">Delegate that executes this test fixture</param>
-        public FixtureUnconditional(string fixtureName, string fixtureDesc, TDelegate? fixtureDelegate) :
-            base(fixtureName, fixtureDesc)
+        /// <param name="initialParameters">Fixture initial parameters</param>
+        public FixtureUnconditional(string fixtureName, string fixtureDesc, Delegate? fixtureDelegate, params object?[]? initialParameters) :
+            base(fixtureName, fixtureDesc, initialParameters)
         {
             // Check for delegate type
             if (fixtureDelegate is null)
@@ -47,9 +47,26 @@ namespace CliTester.Instances
                 throw new ArgumentException("Method in this delegate needs to return void");
 
             // Install values
-            this.fixtureName = fixtureName ?? "Untitled fixture";
-            this.fixtureDesc = fixtureDesc ?? "";
             this.fixtureDelegate = fixtureDelegate;
         }
+    }
+
+    /// <summary>
+    /// Test fixture class (routines that return <see langword="void"/>)
+    /// </summary>
+    [DebuggerDisplay("[U generic: {fixtureDelegate.GetType().Name}] {Name}: {Description}")]
+    public class FixtureUnconditional<TDelegate> : FixtureUnconditional
+        where TDelegate : Delegate
+    {
+        /// <summary>
+        /// Makes a new test fixture class
+        /// </summary>
+        /// <param name="fixtureName">Fixture name</param>
+        /// <param name="fixtureDesc">Fixture description</param>
+        /// <param name="fixtureDelegate">Delegate that executes this test fixture</param>
+        /// <param name="initialParameters">Fixture initial parameters</param>
+        public FixtureUnconditional(string fixtureName, string fixtureDesc, TDelegate? fixtureDelegate, params object?[]? initialParameters) :
+            base(fixtureName, fixtureDesc, fixtureDelegate, initialParameters)
+        { }
     }
 }
