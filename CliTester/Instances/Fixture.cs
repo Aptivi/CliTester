@@ -1,0 +1,57 @@
+﻿//
+// CliTester  Copyright (C) 2024  Aptivi
+//
+// This file is part of CliTester
+//
+// CliTester is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// CliTester is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY, without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with this program.  If not, see <https://www.gnu.org/licenses/>.
+//
+
+using System.Diagnostics;
+
+namespace CliTester.Instances
+{
+    /// <summary>
+    /// Test fixture class (general)
+    /// </summary>
+    [DebuggerDisplay("{Name}: {Description}")]
+    public class Fixture
+    {
+        internal string fixtureName = "";
+        internal string fixtureDesc = "";
+
+        /// <summary>
+        /// Fixture name
+        /// </summary>
+        public string Name =>
+            fixtureName;
+
+        /// <summary>
+        /// Fixture description
+        /// </summary>
+        public string Description =>
+            fixtureDesc;
+
+        /// <summary>
+        /// Makes a new test fixture class
+        /// </summary>
+        /// <param name="fixtureName">Fixture name</param>
+        /// <param name="fixtureDesc">Fixture description</param>
+        public Fixture(string fixtureName, string fixtureDesc)
+        {
+            // Install values
+            this.fixtureName = fixtureName ?? "Untitled fixture";
+            this.fixtureDesc = fixtureDesc ?? "";
+        }
+    }
+}
