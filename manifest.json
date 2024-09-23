@@ -15,6 +15,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/CliTester.Exceptions.NoFixturesException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CliTester.Exceptions.NoFixturesException.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/CliTester.Exceptions.ValueMismatchException.yml",
       "output": {
         ".html": {
@@ -55,10 +65,30 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/CliTester.Instances.FixtureConditional.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CliTester.Instances.FixtureConditional.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/CliTester.Instances.FixtureUnconditional-1.yml",
       "output": {
         ".html": {
           "relative_path": "api/CliTester.Instances.FixtureUnconditional-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CliTester.Instances.FixtureUnconditional.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CliTester.Instances.FixtureUnconditional.html"
         }
       },
       "version": ""
@@ -79,6 +109,16 @@
       "output": {
         ".html": {
           "relative_path": "api/CliTester.Tools.FixtureRunner.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CliTester.Tools.FixtureSelector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CliTester.Tools.FixtureSelector.html"
         }
       },
       "version": ""

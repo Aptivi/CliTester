@@ -7,6 +7,49 @@ references:
   commentId: N:CliTester.Exceptions
   fullName: CliTester.Exceptions
   nameWithType: CliTester.Exceptions
+- uid: CliTester.Exceptions.NoFixturesException
+  name: NoFixturesException
+  href: api/CliTester.Exceptions.NoFixturesException.html
+  commentId: T:CliTester.Exceptions.NoFixturesException
+  fullName: CliTester.Exceptions.NoFixturesException
+  nameWithType: NoFixturesException
+- uid: CliTester.Exceptions.NoFixturesException.#ctor
+  name: NoFixturesException()
+  href: api/CliTester.Exceptions.NoFixturesException.html#CliTester_Exceptions_NoFixturesException__ctor
+  commentId: M:CliTester.Exceptions.NoFixturesException.#ctor
+  name.vb: New()
+  fullName: CliTester.Exceptions.NoFixturesException.NoFixturesException()
+  fullName.vb: CliTester.Exceptions.NoFixturesException.New()
+  nameWithType: NoFixturesException.NoFixturesException()
+  nameWithType.vb: NoFixturesException.New()
+- uid: CliTester.Exceptions.NoFixturesException.#ctor(System.String)
+  name: NoFixturesException(string)
+  href: api/CliTester.Exceptions.NoFixturesException.html#CliTester_Exceptions_NoFixturesException__ctor_System_String_
+  commentId: M:CliTester.Exceptions.NoFixturesException.#ctor(System.String)
+  name.vb: New(String)
+  fullName: CliTester.Exceptions.NoFixturesException.NoFixturesException(string)
+  fullName.vb: CliTester.Exceptions.NoFixturesException.New(String)
+  nameWithType: NoFixturesException.NoFixturesException(string)
+  nameWithType.vb: NoFixturesException.New(String)
+- uid: CliTester.Exceptions.NoFixturesException.#ctor(System.String,System.Exception)
+  name: NoFixturesException(string, Exception)
+  href: api/CliTester.Exceptions.NoFixturesException.html#CliTester_Exceptions_NoFixturesException__ctor_System_String_System_Exception_
+  commentId: M:CliTester.Exceptions.NoFixturesException.#ctor(System.String,System.Exception)
+  name.vb: New(String, Exception)
+  fullName: CliTester.Exceptions.NoFixturesException.NoFixturesException(string, System.Exception)
+  fullName.vb: CliTester.Exceptions.NoFixturesException.New(String, System.Exception)
+  nameWithType: NoFixturesException.NoFixturesException(string, Exception)
+  nameWithType.vb: NoFixturesException.New(String, Exception)
+- uid: CliTester.Exceptions.NoFixturesException.#ctor*
+  name: NoFixturesException
+  href: api/CliTester.Exceptions.NoFixturesException.html#CliTester_Exceptions_NoFixturesException__ctor_
+  commentId: Overload:CliTester.Exceptions.NoFixturesException.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: CliTester.Exceptions.NoFixturesException.NoFixturesException
+  fullName.vb: CliTester.Exceptions.NoFixturesException.New
+  nameWithType: NoFixturesException.NoFixturesException
+  nameWithType.vb: NoFixturesException.New
 - uid: CliTester.Exceptions.ValueMismatchException
   name: ValueMismatchException
   href: api/CliTester.Exceptions.ValueMismatchException.html
@@ -62,15 +105,15 @@ references:
   commentId: T:CliTester.Instances.Fixture
   fullName: CliTester.Instances.Fixture
   nameWithType: Fixture
-- uid: CliTester.Instances.Fixture.#ctor(System.String,System.String)
-  name: Fixture(string, string)
-  href: api/CliTester.Instances.Fixture.html#CliTester_Instances_Fixture__ctor_System_String_System_String_
-  commentId: M:CliTester.Instances.Fixture.#ctor(System.String,System.String)
-  name.vb: New(String, String)
-  fullName: CliTester.Instances.Fixture.Fixture(string, string)
-  fullName.vb: CliTester.Instances.Fixture.New(String, String)
-  nameWithType: Fixture.Fixture(string, string)
-  nameWithType.vb: Fixture.New(String, String)
+- uid: CliTester.Instances.Fixture.#ctor(System.String,System.String,System.Object[])
+  name: Fixture(string, string, params object?[]?)
+  href: api/CliTester.Instances.Fixture.html#CliTester_Instances_Fixture__ctor_System_String_System_String_System_Object___
+  commentId: M:CliTester.Instances.Fixture.#ctor(System.String,System.String,System.Object[])
+  name.vb: New(String, String, ParamArray Object())
+  fullName: CliTester.Instances.Fixture.Fixture(string, string, params object?[]?)
+  fullName.vb: CliTester.Instances.Fixture.New(String, String, ParamArray Object())
+  nameWithType: Fixture.Fixture(string, string, params object?[]?)
+  nameWithType.vb: Fixture.New(String, String, ParamArray Object())
 - uid: CliTester.Instances.Fixture.#ctor*
   name: Fixture
   href: api/CliTester.Instances.Fixture.html#CliTester_Instances_Fixture__ctor_
@@ -107,6 +150,31 @@ references:
   isSpec: "True"
   fullName: CliTester.Instances.Fixture.Name
   nameWithType: Fixture.Name
+- uid: CliTester.Instances.FixtureConditional
+  name: FixtureConditional
+  href: api/CliTester.Instances.FixtureConditional.html
+  commentId: T:CliTester.Instances.FixtureConditional
+  fullName: CliTester.Instances.FixtureConditional
+  nameWithType: FixtureConditional
+- uid: CliTester.Instances.FixtureConditional.#ctor(System.String,System.String,System.Delegate,System.Object,System.Object[])
+  name: FixtureConditional(string, string, Delegate?, object?, params object?[]?)
+  href: api/CliTester.Instances.FixtureConditional.html#CliTester_Instances_FixtureConditional__ctor_System_String_System_String_System_Delegate_System_Object_System_Object___
+  commentId: M:CliTester.Instances.FixtureConditional.#ctor(System.String,System.String,System.Delegate,System.Object,System.Object[])
+  name.vb: New(String, String, Delegate, Object, ParamArray Object())
+  fullName: CliTester.Instances.FixtureConditional.FixtureConditional(string, string, System.Delegate?, object?, params object?[]?)
+  fullName.vb: CliTester.Instances.FixtureConditional.New(String, String, System.Delegate, Object, ParamArray Object())
+  nameWithType: FixtureConditional.FixtureConditional(string, string, Delegate?, object?, params object?[]?)
+  nameWithType.vb: FixtureConditional.New(String, String, Delegate, Object, ParamArray Object())
+- uid: CliTester.Instances.FixtureConditional.#ctor*
+  name: FixtureConditional
+  href: api/CliTester.Instances.FixtureConditional.html#CliTester_Instances_FixtureConditional__ctor_
+  commentId: Overload:CliTester.Instances.FixtureConditional.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: CliTester.Instances.FixtureConditional.FixtureConditional
+  fullName.vb: CliTester.Instances.FixtureConditional.New
+  nameWithType: FixtureConditional.FixtureConditional
+  nameWithType.vb: FixtureConditional.New
 - uid: CliTester.Instances.FixtureConditional`1
   name: FixtureConditional<TDelegate>
   href: api/CliTester.Instances.FixtureConditional-1.html
@@ -116,15 +184,15 @@ references:
   fullName.vb: CliTester.Instances.FixtureConditional(Of TDelegate)
   nameWithType: FixtureConditional<TDelegate>
   nameWithType.vb: FixtureConditional(Of TDelegate)
-- uid: CliTester.Instances.FixtureConditional`1.#ctor(System.String,System.String,`0,System.Object)
-  name: FixtureConditional(string, string, TDelegate?, object?)
-  href: api/CliTester.Instances.FixtureConditional-1.html#CliTester_Instances_FixtureConditional_1__ctor_System_String_System_String__0_System_Object_
-  commentId: M:CliTester.Instances.FixtureConditional`1.#ctor(System.String,System.String,`0,System.Object)
-  name.vb: New(String, String, TDelegate, Object)
-  fullName: CliTester.Instances.FixtureConditional<TDelegate>.FixtureConditional(string, string, TDelegate?, object?)
-  fullName.vb: CliTester.Instances.FixtureConditional(Of TDelegate).New(String, String, TDelegate, Object)
-  nameWithType: FixtureConditional<TDelegate>.FixtureConditional(string, string, TDelegate?, object?)
-  nameWithType.vb: FixtureConditional(Of TDelegate).New(String, String, TDelegate, Object)
+- uid: CliTester.Instances.FixtureConditional`1.#ctor(System.String,System.String,`0,System.Object,System.Object[])
+  name: FixtureConditional(string, string, TDelegate?, object?, params object?[]?)
+  href: api/CliTester.Instances.FixtureConditional-1.html#CliTester_Instances_FixtureConditional_1__ctor_System_String_System_String__0_System_Object_System_Object___
+  commentId: M:CliTester.Instances.FixtureConditional`1.#ctor(System.String,System.String,`0,System.Object,System.Object[])
+  name.vb: New(String, String, TDelegate, Object, ParamArray Object())
+  fullName: CliTester.Instances.FixtureConditional<TDelegate>.FixtureConditional(string, string, TDelegate?, object?, params object?[]?)
+  fullName.vb: CliTester.Instances.FixtureConditional(Of TDelegate).New(String, String, TDelegate, Object, ParamArray Object())
+  nameWithType: FixtureConditional<TDelegate>.FixtureConditional(string, string, TDelegate?, object?, params object?[]?)
+  nameWithType.vb: FixtureConditional(Of TDelegate).New(String, String, TDelegate, Object, ParamArray Object())
 - uid: CliTester.Instances.FixtureConditional`1.#ctor*
   name: FixtureConditional
   href: api/CliTester.Instances.FixtureConditional-1.html#CliTester_Instances_FixtureConditional_1__ctor_
@@ -135,6 +203,31 @@ references:
   fullName.vb: CliTester.Instances.FixtureConditional(Of TDelegate).New
   nameWithType: FixtureConditional<TDelegate>.FixtureConditional
   nameWithType.vb: FixtureConditional(Of TDelegate).New
+- uid: CliTester.Instances.FixtureUnconditional
+  name: FixtureUnconditional
+  href: api/CliTester.Instances.FixtureUnconditional.html
+  commentId: T:CliTester.Instances.FixtureUnconditional
+  fullName: CliTester.Instances.FixtureUnconditional
+  nameWithType: FixtureUnconditional
+- uid: CliTester.Instances.FixtureUnconditional.#ctor(System.String,System.String,System.Delegate,System.Object[])
+  name: FixtureUnconditional(string, string, Delegate?, params object?[]?)
+  href: api/CliTester.Instances.FixtureUnconditional.html#CliTester_Instances_FixtureUnconditional__ctor_System_String_System_String_System_Delegate_System_Object___
+  commentId: M:CliTester.Instances.FixtureUnconditional.#ctor(System.String,System.String,System.Delegate,System.Object[])
+  name.vb: New(String, String, Delegate, ParamArray Object())
+  fullName: CliTester.Instances.FixtureUnconditional.FixtureUnconditional(string, string, System.Delegate?, params object?[]?)
+  fullName.vb: CliTester.Instances.FixtureUnconditional.New(String, String, System.Delegate, ParamArray Object())
+  nameWithType: FixtureUnconditional.FixtureUnconditional(string, string, Delegate?, params object?[]?)
+  nameWithType.vb: FixtureUnconditional.New(String, String, Delegate, ParamArray Object())
+- uid: CliTester.Instances.FixtureUnconditional.#ctor*
+  name: FixtureUnconditional
+  href: api/CliTester.Instances.FixtureUnconditional.html#CliTester_Instances_FixtureUnconditional__ctor_
+  commentId: Overload:CliTester.Instances.FixtureUnconditional.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: CliTester.Instances.FixtureUnconditional.FixtureUnconditional
+  fullName.vb: CliTester.Instances.FixtureUnconditional.New
+  nameWithType: FixtureUnconditional.FixtureUnconditional
+  nameWithType.vb: FixtureUnconditional.New
 - uid: CliTester.Instances.FixtureUnconditional`1
   name: FixtureUnconditional<TDelegate>
   href: api/CliTester.Instances.FixtureUnconditional-1.html
@@ -144,15 +237,15 @@ references:
   fullName.vb: CliTester.Instances.FixtureUnconditional(Of TDelegate)
   nameWithType: FixtureUnconditional<TDelegate>
   nameWithType.vb: FixtureUnconditional(Of TDelegate)
-- uid: CliTester.Instances.FixtureUnconditional`1.#ctor(System.String,System.String,`0)
-  name: FixtureUnconditional(string, string, TDelegate?)
-  href: api/CliTester.Instances.FixtureUnconditional-1.html#CliTester_Instances_FixtureUnconditional_1__ctor_System_String_System_String__0_
-  commentId: M:CliTester.Instances.FixtureUnconditional`1.#ctor(System.String,System.String,`0)
-  name.vb: New(String, String, TDelegate)
-  fullName: CliTester.Instances.FixtureUnconditional<TDelegate>.FixtureUnconditional(string, string, TDelegate?)
-  fullName.vb: CliTester.Instances.FixtureUnconditional(Of TDelegate).New(String, String, TDelegate)
-  nameWithType: FixtureUnconditional<TDelegate>.FixtureUnconditional(string, string, TDelegate?)
-  nameWithType.vb: FixtureUnconditional(Of TDelegate).New(String, String, TDelegate)
+- uid: CliTester.Instances.FixtureUnconditional`1.#ctor(System.String,System.String,`0,System.Object[])
+  name: FixtureUnconditional(string, string, TDelegate?, params object?[]?)
+  href: api/CliTester.Instances.FixtureUnconditional-1.html#CliTester_Instances_FixtureUnconditional_1__ctor_System_String_System_String__0_System_Object___
+  commentId: M:CliTester.Instances.FixtureUnconditional`1.#ctor(System.String,System.String,`0,System.Object[])
+  name.vb: New(String, String, TDelegate, ParamArray Object())
+  fullName: CliTester.Instances.FixtureUnconditional<TDelegate>.FixtureUnconditional(string, string, TDelegate?, params object?[]?)
+  fullName.vb: CliTester.Instances.FixtureUnconditional(Of TDelegate).New(String, String, TDelegate, ParamArray Object())
+  nameWithType: FixtureUnconditional<TDelegate>.FixtureUnconditional(string, string, TDelegate?, params object?[]?)
+  nameWithType.vb: FixtureUnconditional(Of TDelegate).New(String, String, TDelegate, ParamArray Object())
 - uid: CliTester.Instances.FixtureUnconditional`1.#ctor*
   name: FixtureUnconditional
   href: api/CliTester.Instances.FixtureUnconditional-1.html#CliTester_Instances_FixtureUnconditional_1__ctor_
@@ -175,6 +268,38 @@ references:
   commentId: T:CliTester.Tools.FixtureRunner
   fullName: CliTester.Tools.FixtureRunner
   nameWithType: FixtureRunner
+- uid: CliTester.Tools.FixtureRunner.RunConditionalTest*
+  name: RunConditionalTest
+  href: api/CliTester.Tools.FixtureRunner.html#CliTester_Tools_FixtureRunner_RunConditionalTest_
+  commentId: Overload:CliTester.Tools.FixtureRunner.RunConditionalTest
+  isSpec: "True"
+  fullName: CliTester.Tools.FixtureRunner.RunConditionalTest
+  nameWithType: FixtureRunner.RunConditionalTest
+- uid: CliTester.Tools.FixtureRunner.RunConditionalTest``1(CliTester.Instances.FixtureConditional,System.Exception@,System.Object[])
+  name: RunConditionalTest<TValue>(FixtureConditional?, out Exception?, params object?[]?)
+  href: api/CliTester.Tools.FixtureRunner.html#CliTester_Tools_FixtureRunner_RunConditionalTest__1_CliTester_Instances_FixtureConditional_System_Exception__System_Object___
+  commentId: M:CliTester.Tools.FixtureRunner.RunConditionalTest``1(CliTester.Instances.FixtureConditional,System.Exception@,System.Object[])
+  name.vb: RunConditionalTest(Of TValue)(FixtureConditional, Exception, ParamArray Object())
+  fullName: CliTester.Tools.FixtureRunner.RunConditionalTest<TValue>(CliTester.Instances.FixtureConditional?, out System.Exception?, params object?[]?)
+  fullName.vb: CliTester.Tools.FixtureRunner.RunConditionalTest(Of TValue)(CliTester.Instances.FixtureConditional, System.Exception, ParamArray Object())
+  nameWithType: FixtureRunner.RunConditionalTest<TValue>(FixtureConditional?, out Exception?, params object?[]?)
+  nameWithType.vb: FixtureRunner.RunConditionalTest(Of TValue)(FixtureConditional, Exception, ParamArray Object())
+- uid: CliTester.Tools.FixtureRunner.RunGeneralTest(CliTester.Instances.Fixture,System.Exception@,System.Object[])
+  name: RunGeneralTest(Fixture?, out Exception?, params object?[]?)
+  href: api/CliTester.Tools.FixtureRunner.html#CliTester_Tools_FixtureRunner_RunGeneralTest_CliTester_Instances_Fixture_System_Exception__System_Object___
+  commentId: M:CliTester.Tools.FixtureRunner.RunGeneralTest(CliTester.Instances.Fixture,System.Exception@,System.Object[])
+  name.vb: RunGeneralTest(Fixture, Exception, ParamArray Object())
+  fullName: CliTester.Tools.FixtureRunner.RunGeneralTest(CliTester.Instances.Fixture?, out System.Exception?, params object?[]?)
+  fullName.vb: CliTester.Tools.FixtureRunner.RunGeneralTest(CliTester.Instances.Fixture, System.Exception, ParamArray Object())
+  nameWithType: FixtureRunner.RunGeneralTest(Fixture?, out Exception?, params object?[]?)
+  nameWithType.vb: FixtureRunner.RunGeneralTest(Fixture, Exception, ParamArray Object())
+- uid: CliTester.Tools.FixtureRunner.RunGeneralTest*
+  name: RunGeneralTest
+  href: api/CliTester.Tools.FixtureRunner.html#CliTester_Tools_FixtureRunner_RunGeneralTest_
+  commentId: Overload:CliTester.Tools.FixtureRunner.RunGeneralTest
+  isSpec: "True"
+  fullName: CliTester.Tools.FixtureRunner.RunGeneralTest
+  nameWithType: FixtureRunner.RunGeneralTest
 - uid: CliTester.Tools.FixtureRunner.RunTest*
   name: RunTest
   href: api/CliTester.Tools.FixtureRunner.html#CliTester_Tools_FixtureRunner_RunTest_
@@ -200,3 +325,41 @@ references:
   fullName.vb: CliTester.Tools.FixtureRunner.RunTest(Of TDelegate, TValue)(CliTester.Instances.FixtureConditional(Of TDelegate), System.Exception, ParamArray Object())
   nameWithType: FixtureRunner.RunTest<TDelegate, TValue>(FixtureConditional<TDelegate>?, out Exception?, params object?[]?)
   nameWithType.vb: FixtureRunner.RunTest(Of TDelegate, TValue)(FixtureConditional(Of TDelegate), Exception, ParamArray Object())
+- uid: CliTester.Tools.FixtureRunner.RunUnconditionalTest(CliTester.Instances.FixtureUnconditional,System.Exception@,System.Object[])
+  name: RunUnconditionalTest(FixtureUnconditional?, out Exception?, params object?[]?)
+  href: api/CliTester.Tools.FixtureRunner.html#CliTester_Tools_FixtureRunner_RunUnconditionalTest_CliTester_Instances_FixtureUnconditional_System_Exception__System_Object___
+  commentId: M:CliTester.Tools.FixtureRunner.RunUnconditionalTest(CliTester.Instances.FixtureUnconditional,System.Exception@,System.Object[])
+  name.vb: RunUnconditionalTest(FixtureUnconditional, Exception, ParamArray Object())
+  fullName: CliTester.Tools.FixtureRunner.RunUnconditionalTest(CliTester.Instances.FixtureUnconditional?, out System.Exception?, params object?[]?)
+  fullName.vb: CliTester.Tools.FixtureRunner.RunUnconditionalTest(CliTester.Instances.FixtureUnconditional, System.Exception, ParamArray Object())
+  nameWithType: FixtureRunner.RunUnconditionalTest(FixtureUnconditional?, out Exception?, params object?[]?)
+  nameWithType.vb: FixtureRunner.RunUnconditionalTest(FixtureUnconditional, Exception, ParamArray Object())
+- uid: CliTester.Tools.FixtureRunner.RunUnconditionalTest*
+  name: RunUnconditionalTest
+  href: api/CliTester.Tools.FixtureRunner.html#CliTester_Tools_FixtureRunner_RunUnconditionalTest_
+  commentId: Overload:CliTester.Tools.FixtureRunner.RunUnconditionalTest
+  isSpec: "True"
+  fullName: CliTester.Tools.FixtureRunner.RunUnconditionalTest
+  nameWithType: FixtureRunner.RunUnconditionalTest
+- uid: CliTester.Tools.FixtureSelector
+  name: FixtureSelector
+  href: api/CliTester.Tools.FixtureSelector.html
+  commentId: T:CliTester.Tools.FixtureSelector
+  fullName: CliTester.Tools.FixtureSelector
+  nameWithType: FixtureSelector
+- uid: CliTester.Tools.FixtureSelector.OpenFixtureSelector(CliTester.Instances.Fixture[])
+  name: OpenFixtureSelector(Fixture[]?)
+  href: api/CliTester.Tools.FixtureSelector.html#CliTester_Tools_FixtureSelector_OpenFixtureSelector_CliTester_Instances_Fixture___
+  commentId: M:CliTester.Tools.FixtureSelector.OpenFixtureSelector(CliTester.Instances.Fixture[])
+  name.vb: OpenFixtureSelector(Fixture())
+  fullName: CliTester.Tools.FixtureSelector.OpenFixtureSelector(CliTester.Instances.Fixture[]?)
+  fullName.vb: CliTester.Tools.FixtureSelector.OpenFixtureSelector(CliTester.Instances.Fixture())
+  nameWithType: FixtureSelector.OpenFixtureSelector(Fixture[]?)
+  nameWithType.vb: FixtureSelector.OpenFixtureSelector(Fixture())
+- uid: CliTester.Tools.FixtureSelector.OpenFixtureSelector*
+  name: OpenFixtureSelector
+  href: api/CliTester.Tools.FixtureSelector.html#CliTester_Tools_FixtureSelector_OpenFixtureSelector_
+  commentId: Overload:CliTester.Tools.FixtureSelector.OpenFixtureSelector
+  isSpec: "True"
+  fullName: CliTester.Tools.FixtureSelector.OpenFixtureSelector
+  nameWithType: FixtureSelector.OpenFixtureSelector

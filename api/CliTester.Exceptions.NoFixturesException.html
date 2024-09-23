@@ -5,11 +5,11 @@
   <head>
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Class Fixture | CliTester API - Aptivi </title>
+      <title>Class NoFixturesException | CliTester API - Aptivi </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Class Fixture | CliTester API - Aptivi ">
+      <meta name="title" content="Class NoFixturesException | CliTester API - Aptivi ">
     
-    <meta name="description" content="Test fixture class (general)">
+    <meta name="description" content="This is an exception that gets thrown when there are no fixtures">
       <link rel="shortcut icon" href="../favicon.ico">
       <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="../styles/docfx.css">
@@ -76,44 +76,60 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="CliTester.Instances.Fixture">
+            <article class="content wrap" id="_content" data-uid="CliTester.Exceptions.NoFixturesException">
 
 
 
-  <h1 id="CliTester_Instances_Fixture" data-uid="CliTester.Instances.Fixture" class="text-break">Class Fixture</h1>
-  <div class="markdown level0 summary"><p>Test fixture class (general)</p>
+  <h1 id="CliTester_Exceptions_NoFixturesException" data-uid="CliTester.Exceptions.NoFixturesException" class="text-break">Class NoFixturesException</h1>
+  <div class="markdown level0 summary"><p>This is an exception that gets thrown when there are no fixtures</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-    <div class="level1"><span class="xref">Fixture</span></div>
-      <div class="level2"><a class="xref" href="CliTester.Instances.FixtureConditional.html">FixtureConditional</a></div>
-      <div class="level2"><a class="xref" href="CliTester.Instances.FixtureUnconditional.html">FixtureUnconditional</a></div>
+    <div class="level1"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></div>
+    <div class="level2"><span class="xref">NoFixturesException</span></div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="CliTester.html">CliTester</a>.<a class="xref" href="CliTester.Instances.html">Instances</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="CliTester.html">CliTester</a>.<a class="xref" href="CliTester.Exceptions.html">Exceptions</a></h6>
   <h6><strong>Assembly</strong>: CliTester.dll</h6>
-  <h5 id="CliTester_Instances_Fixture_syntax">Syntax</h5>
+  <h5 id="CliTester_Exceptions_NoFixturesException_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class Fixture</code></pre>
+    <pre><code class="lang-csharp hljs">[Serializable]
+public class NoFixturesException : Exception</code></pre>
   </div>
   <h3 id="constructors">Constructors
 </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Aptivi/CliTester/new/main/apiSpec/new?filename=CliTester_Instances_Fixture__ctor_System_String_System_String_System_Object___.md&amp;value=---%0Auid%3A%20CliTester.Instances.Fixture.%23ctor(System.String%2CSystem.String%2CSystem.Object%5B%5D)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+    <a href="https://github.com/Aptivi/CliTester/new/main/apiSpec/new?filename=CliTester_Exceptions_NoFixturesException__ctor.md&amp;value=---%0Auid%3A%20CliTester.Exceptions.NoFixturesException.%23ctor%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/CliTester/blob/main/CliTester/Instances/Fixture.cs/#L52">View Source</a>
+    <a href="https://github.com/Aptivi/CliTester/blob/main/CliTester/Exceptions/NoFixturesException.cs/#L33">View Source</a>
   </span>
-  <a id="CliTester_Instances_Fixture__ctor_" data-uid="CliTester.Instances.Fixture.#ctor*"></a>
-  <h4 id="CliTester_Instances_Fixture__ctor_System_String_System_String_System_Object___" data-uid="CliTester.Instances.Fixture.#ctor(System.String,System.String,System.Object[])">Fixture(string, string, params object?[]?)</h4>
-  <div class="markdown level1 summary"><p>Makes a new test fixture class</p>
+  <a id="CliTester_Exceptions_NoFixturesException__ctor_" data-uid="CliTester.Exceptions.NoFixturesException.#ctor*"></a>
+  <h4 id="CliTester_Exceptions_NoFixturesException__ctor" data-uid="CliTester.Exceptions.NoFixturesException.#ctor">NoFixturesException()</h4>
+  <div class="markdown level1 summary"><p>Creates a new exception</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Fixture(string fixtureName, string fixtureDesc, params object?[]? initialParameters)</code></pre>
+    <pre><code class="lang-csharp hljs">public NoFixturesException()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Aptivi/CliTester/new/main/apiSpec/new?filename=CliTester_Exceptions_NoFixturesException__ctor_System_String_.md&amp;value=---%0Auid%3A%20CliTester.Exceptions.NoFixturesException.%23ctor(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Aptivi/CliTester/blob/main/CliTester/Exceptions/NoFixturesException.cs/#L40">View Source</a>
+  </span>
+  <a id="CliTester_Exceptions_NoFixturesException__ctor_" data-uid="CliTester.Exceptions.NoFixturesException.#ctor*"></a>
+  <h4 id="CliTester_Exceptions_NoFixturesException__ctor_System_String_" data-uid="CliTester.Exceptions.NoFixturesException.#ctor(System.String)">NoFixturesException(string)</h4>
+  <div class="markdown level1 summary"><p>Creates a new exception</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NoFixturesException(string message)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -127,85 +143,49 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><span class="parametername">fixtureName</span></td>
-        <td><p>Fixture name</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td><span class="parametername">fixtureDesc</span></td>
-        <td><p>Fixture description</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</td>
-        <td><span class="parametername">initialParameters</span></td>
-        <td><p>Fixture initial parameters</p>
+        <td><span class="parametername">message</span></td>
+        <td><p>Message to describe the reason</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <h3 id="properties">Properties
-</h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Aptivi/CliTester/new/main/apiSpec/new?filename=CliTester_Instances_Fixture_Description.md&amp;value=---%0Auid%3A%20CliTester.Instances.Fixture.Description%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
+    <a href="https://github.com/Aptivi/CliTester/new/main/apiSpec/new?filename=CliTester_Exceptions_NoFixturesException__ctor_System_String_System_Exception_.md&amp;value=---%0Auid%3A%20CliTester.Exceptions.NoFixturesException.%23ctor(System.String%2CSystem.Exception)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/CliTester/blob/main/CliTester/Instances/Fixture.cs/#L43">View Source</a>
+    <a href="https://github.com/Aptivi/CliTester/blob/main/CliTester/Exceptions/NoFixturesException.cs/#L49">View Source</a>
   </span>
-  <a id="CliTester_Instances_Fixture_Description_" data-uid="CliTester.Instances.Fixture.Description*"></a>
-  <h4 id="CliTester_Instances_Fixture_Description" data-uid="CliTester.Instances.Fixture.Description">Description</h4>
-  <div class="markdown level1 summary"><p>Fixture description</p>
+  <a id="CliTester_Exceptions_NoFixturesException__ctor_" data-uid="CliTester.Exceptions.NoFixturesException.#ctor*"></a>
+  <h4 id="CliTester_Exceptions_NoFixturesException__ctor_System_String_System_Exception_" data-uid="CliTester.Exceptions.NoFixturesException.#ctor(System.String,System.Exception)">NoFixturesException(string, Exception)</h4>
+  <div class="markdown level1 summary"><p>Creates a new exception</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Description { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public NoFixturesException(string message, Exception inner)</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
     <thead>
       <tr>
         <th>Type</th>
+        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>Message to describe the reason</p>
+</td>
       </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Aptivi/CliTester/new/main/apiSpec/new?filename=CliTester_Instances_Fixture_Name.md&amp;value=---%0Auid%3A%20CliTester.Instances.Fixture.Name%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Edit this page</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Aptivi/CliTester/blob/main/CliTester/Instances/Fixture.cs/#L37">View Source</a>
-  </span>
-  <a id="CliTester_Instances_Fixture_Name_" data-uid="CliTester.Instances.Fixture.Name*"></a>
-  <h4 id="CliTester_Instances_Fixture_Name" data-uid="CliTester.Instances.Fixture.Name">Name</h4>
-  <div class="markdown level1 summary"><p>Fixture name</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Name { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-condensed">
-    <thead>
       <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></td>
-        <td></td>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></td>
+        <td><span class="parametername">inner</span></td>
+        <td><p>Inner exception</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -218,10 +198,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/Aptivi/CliTester/new/main/apiSpec/new?filename=CliTester_Instances_Fixture.md&amp;value=---%0Auid%3A%20CliTester.Instances.Fixture%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
+                    <a href="https://github.com/Aptivi/CliTester/new/main/apiSpec/new?filename=CliTester_Exceptions_NoFixturesException.md&amp;value=---%0Auid%3A%20CliTester.Exceptions.NoFixturesException%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Edit this page</a>
                   </li>
                   <li>
-                    <a href="https://github.com/Aptivi/CliTester/blob/main/CliTester/Instances/Fixture.cs/#L27" class="contribution-link">View Source</a>
+                    <a href="https://github.com/Aptivi/CliTester/blob/main/CliTester/Exceptions/NoFixturesException.cs/#L27" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
