@@ -17,26 +17,23 @@
 #   You should have received a copy of the GNU General Public License
 #   along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-# This script pushes. Use when you have dotnet installed.
-releaseconf=$1
-if [ -z $releaseconf ]; then
-	releaseconf=Release
-fi
+# Convenience functions
+checkerror() {
+    if [ $1 != 0 ]
+    then
+        printf "$2 - Error $1\n" >&2
+        exit $1
+    fi
+}
 
-# Check for dependencies
+# This script pushes. Use when you have dotnet installed.
 dotnetpath=`which dotnet`
-if [ ! $? == 0 ]; then
-	echo dotnet is not found.
-	exit 1
-fi
+checkerror $? "dotnet is not found"
 
 # Push packages
 echo Pushing packages...
 find .. -type f -path "*/bin/$releaseconf/*.nupkg" -exec dotnet nuget push {} --api-key $NUGET_APIKEY --source "nuget.org" \;
-if [ ! $? == 0 ]; then
-	echo Push failed.
-	exit 1
-fi
+checkerror $? "Failed to push"
 
 # Inform success
 echo Push successful.
